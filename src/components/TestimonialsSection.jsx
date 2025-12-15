@@ -6,25 +6,25 @@ export default function TestimonialsSection() {
       name: "Lana Bernier",
       role: "Lorem ipsum",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae arcu a felis placerat tincidunt. Curabitur lacinia, ligula vitae aliquam faucibus.",
-      img: {testimg}, // avatar image
+      img: testimg, // avatar image
     },
     {
       name: "Lana Bernier",
       role: "Lorem ipsum",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae arcu a felis placerat tincidunt. Curabitur lacinia, ligula vitae aliquam faucibus.",
-      img: {testimg},
+      img: testimg,
     },
     {
       name: "Lana Bernier",
       role: "Lorem ipsum",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae arcu a felis placerat tincidunt. Curabitur lacinia, ligula vitae aliquam faucibus.",
-      img: {testimg},
+      img: testimg,
     },
     {
       name: "Lana Bernier",
       role: "Lorem ipsum",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae arcu a felis placerat tincidunt. Curabitur lacinia, ligula vitae aliquam faucibus.",
-      img: {testimg},
+      img: testimg,
     },
   ];
 
