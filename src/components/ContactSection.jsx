@@ -1,109 +1,94 @@
-import React from "react";
+import { FaEnvelope, FaPhone } from "react-icons/fa";
 
 export default function ContactSection() {
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    e.target.submit();
-  };
-
   return (
-    <section
-      id="contact"
-      className="w-full py-20 bg-[#e9faf5]"
-    >
-      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section id="contact" className="w-full bg-[#F1FCFA] py-20">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 px-6">
 
-        {/* LEFT CONTENT */}
+        {/* LEFT SIDE */}
         <div>
-          <h2 className="text-4xl font-bold text-[#0b6b57] mb-4">
-            Lorem Ipsum<br />Simply Dummy
+          <h2 className="text-4xl font-bold text-gray-900 leading-snug mb-6">
+            Lorem Ipsum <br /> Simply Dummy
           </h2>
 
           <p className="text-gray-700 mb-6">
-            Lorem Ipsum Is Simply Dummy Printing And Typesetting.
+            Lorem Ipsum Is Simply Dummy Printing And Typesetting
           </p>
 
           <p className="text-gray-700 mb-6">
             Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting.
           </p>
 
-          <div className="space-y-3 text-[#0b6b57]">
-            <p>📧 info@loremipsum.com</p>
-            <p>📞 +0 9876-54321</p>
+          <h3 className="font-semibold text-gray-900 mb-4">LOREM IPSUM</h3>
+
+          {/* Email */}
+          <div className="flex items-center gap-3 mb-4">
+            <FaEnvelope className="text-[#006F5F] text-xl" />
+            <a href="mailto:info@loremipsum.com" className="text-lg text-gray-900">
+              info@loremipsum.com
+            </a>
+          </div>
+
+          {/* Phone */}
+          <div className="flex items-center gap-3">
+            <FaPhone className="text-[#006F5F] text-xl" />
+            <a href="tel:+0987654321" className="text-lg text-gray-900">
+              +0 9876-54321
+            </a>
           </div>
         </div>
 
-        {/* RIGHT FORM */}
-        <form
-          action="https://formsubmit.co/YOUR_EMAIL_HERE"
-          method="POST"
-          onSubmit={handleSubmit}
-          className="bg-white p-8 rounded-xl shadow-lg"
-        >
-          {/* Disable Captcha */}
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_template" value="table" />
-          <input
-            type="hidden"
-            name="_subject"
-            value="New SwiftRooms Enquiry"
-          />
+        {/* RIGHT SIDE FORM */}
+        <div className="bg-white shadow-md rounded-xl p-8">
+          <form className="space-y-5">
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-
-            {/* Name */}
             <input
               type="text"
-              name="name"
               placeholder="Name*"
-              required
-              className="border rounded-md px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-[#0b6b57]"
+              className="w-full border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-600"
             />
 
-            {/* Number */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <input
+                type="text"
+                placeholder="Number*"
+                className="border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-600"
+              />
+              <input
+                type="email"
+                placeholder="Email*"
+                className="border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-600"
+              />
+            </div>
+
             <input
-              type="tel"
-              name="phone"
-              placeholder="Number*"
-              required
-              className="border rounded-md px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-[#0b6b57]"
+              type="text"
+              placeholder="Industry*"
+              className="w-full border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-600"
             />
 
-            {/* Email */}
-            <input
-              type="email"
-              name="email"
-              placeholder="Email*"
-              required
-              className="md:col-span-2 border rounded-md px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-[#0b6b57]"
-            />
-
-            {/* Message */}
             <textarea
-              name="message"
-              placeholder="Message"
               rows="4"
-              className="md:col-span-2 border rounded-md px-4 py-3 w-full resize-none focus:outline-none focus:ring-2 focus:ring-[#0b6b57]"
+              placeholder="Lorem Ipsum is simply?"
+              className="w-full border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-600"
             />
-          </div>
 
-          {/* Checkbox */}
-          <div className="flex items-start gap-2 mt-4 text-sm text-gray-600">
-            <input type="checkbox" required className="mt-1" />
-            <span>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            </span>
-          </div>
+            <div className="flex items-start gap-3">
+              <input type="checkbox" className="mt-1" />
+              <p className="text-gray-600 text-sm">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              </p>
+            </div>
 
-          {/* Submit Button */}
-          <button
-            type="submit"
-            className="mt-6 w-full bg-[#0b6b57] text-white py-3 rounded-lg hover:bg-[#094f41] transition"
-          >
-            Submit
-          </button>
-        </form>
+            <button
+              type="submit"
+              className="w-full bg-[#006F5F] text-white py-3 rounded-md font-semibold hover:bg-[#005546] transition"
+            >
+              Submit
+            </button>
+
+          </form>
+        </div>
       </div>
     </section>
   );
