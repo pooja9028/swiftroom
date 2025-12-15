@@ -1,24 +1,26 @@
+import Icon from "../assets/Icon.png";
+
 export default function WhyChooseUs() {
   const items = [
     {
       title: "Lorem is",
       desc: "On the other hand, we denounce with righteous end indignation and dislike men who are so beguiled and.",
-      icon: "/src/assets/Icon.png", // update with your icon file
+      icon: {Icon}, // update with your icon file
     },
     {
       title: "Lorem is",
       desc: "On the other hand, we denounce with righteous end indignation and dislike men who are so beguiled and.",
-      icon: "/src/assets/Icon.png",
+      icon: {Icon},
     },
     {
       title: "Lorem is",
       desc: "On the other hand, we denounce with righteous end indignation and dislike men who are so beguiled and.",
-      icon: "/src/assets/Icon.png",
+      icon: {Icon},
     },
     {
       title: "Lorem is",
       desc: "On the other hand, we denounce with righteous end indignation and dislike men who are so beguiled and.",
-      icon: "/src/assets/Icon.png",
+      icon: {Icon},
     },
   ];
 
