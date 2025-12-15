@@ -21,7 +21,6 @@ export default function ContactSection() {
 
           <h3 className="font-semibold text-gray-900 mb-4">LOREM IPSUM</h3>
 
-          {/* Email */}
           <div className="flex items-center gap-3 mb-4">
             <FaEnvelope className="text-[#006F5F] text-xl" />
             <a href="mailto:info@loremipsum.com" className="text-lg text-gray-900">
@@ -29,7 +28,6 @@ export default function ContactSection() {
             </a>
           </div>
 
-          {/* Phone */}
           <div className="flex items-center gap-3">
             <FaPhone className="text-[#006F5F] text-xl" />
             <a href="tel:+0987654321" className="text-lg text-gray-900">
@@ -40,41 +38,58 @@ export default function ContactSection() {
 
         {/* RIGHT SIDE FORM */}
         <div className="bg-white shadow-md rounded-xl p-8">
-          <form className="space-y-5">
+          <form
+            action="https://formsubmit.co/hello@swiftrooms.ae"
+            method="POST"
+            className="space-y-5"
+          >
+            {/* REQUIRED CONFIG */}
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_subject" value="New Website Enquiry" />
 
             <input
               type="text"
+              name="name"
               placeholder="Name*"
+              required
               className="w-full border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-600"
             />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input
-                type="text"
+                type="tel"
+                name="phone"
                 placeholder="Number*"
+                required
                 className="border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-600"
               />
               <input
                 type="email"
+                name="email"
                 placeholder="Email*"
+                required
                 className="border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-600"
               />
             </div>
 
             <input
               type="text"
+              name="industry"
               placeholder="Industry*"
+              required
               className="w-full border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-600"
             />
 
             <textarea
               rows="4"
+              name="message"
               placeholder="Lorem Ipsum is simply?"
               className="w-full border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-600"
             />
 
             <div className="flex items-start gap-3">
-              <input type="checkbox" className="mt-1" />
+              <input type="checkbox" required className="mt-1" />
               <p className="text-gray-600 text-sm">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
               </p>
@@ -86,7 +101,6 @@ export default function ContactSection() {
             >
               Submit
             </button>
-
           </form>
         </div>
       </div>
