@@ -1,95 +1,66 @@
-import { FaEnvelope, FaPhone } from "react-icons/fa";
+import { useState } from "react";
 
 export default function ContactSection() {
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const form = e.target;
+    const data = {
+      name: form.name.value,
+      phone: form.phone.value,
+      email: form.email.value,
+      message: form.message.value,
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (res.ok) {
+        setStatus("SUCCESS");
+        form.reset();
+      } else {
+        setStatus("ERROR");
+      }
+    } catch {
+      setStatus("ERROR");
+    }
+
+    setLoading(false);
+  };
+
   return (
-    <section id="contact" className="w-full bg-[#F1FCFA] py-20">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 px-6">
+    <section id="contact" className="py-20 bg-[#e9faf6]">
+      <form
+        onSubmit={handleSubmit}
+        className="bg-white max-w-xl mx-auto p-8 rounded-xl shadow"
+      >
+        <input name="name" placeholder="Name*" required className="input" />
+        <input name="phone" placeholder="Number*" required className="input" />
+        <input name="email" type="email" placeholder="Email*" required className="input" />
+        <textarea name="message" placeholder="Message" className="input" />
 
-        {/* LEFT SIDE */}
-        <div>
-          <h2 className="text-4xl font-bold text-gray-900 leading-snug mb-6">
-            Lorem Ipsum <br /> Simply Dummy
-          </h2>
+        <button
+          disabled={loading}
+          className="w-full bg-[#0b6b57] text-white py-3 rounded-lg"
+        >
+          {loading ? "Sending..." : "Submit"}
+        </button>
 
-          <p className="text-gray-700 mb-6">
-            Lorem Ipsum Is Simply Dummy Printing And Typesetting
-          </p>
-
-          <p className="text-gray-700 mb-6">
-            Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting.
-          </p>
-
-          <h3 className="font-semibold text-gray-900 mb-4">LOREM IPSUM</h3>
-
-          {/* Email */}
-          <div className="flex items-center gap-3 mb-4">
-            <FaEnvelope className="text-[#006F5F] text-xl" />
-            <a href="mailto:info@loremipsum.com" className="text-lg text-gray-900">
-              info@loremipsum.com
-            </a>
-          </div>
-
-          {/* Phone */}
-          <div className="flex items-center gap-3">
-            <FaPhone className="text-[#006F5F] text-xl" />
-            <a href="tel:+0987654321" className="text-lg text-gray-900">
-              +0 9876-54321
-            </a>
-          </div>
-        </div>
-
-        {/* RIGHT SIDE FORM */}
-        <div className="bg-white shadow-md rounded-xl p-8">
-          <form className="space-y-5">
-
-            <input
-              type="text"
-              placeholder="Name*"
-              className="w-full border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-600"
-            />
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <input
-                type="text"
-                placeholder="Number*"
-                className="border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-600"
-              />
-              <input
-                type="email"
-                placeholder="Email*"
-                className="border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-600"
-              />
-            </div>
-
-            <input
-              type="text"
-              placeholder="Industry*"
-              className="w-full border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-600"
-            />
-
-            <textarea
-              rows="4"
-              placeholder="Lorem Ipsum is simply?"
-              className="w-full border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-600"
-            />
-
-            <div className="flex items-start gap-3">
-              <input type="checkbox" className="mt-1" />
-              <p className="text-gray-600 text-sm">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              </p>
-            </div>
-
-            <button
-              type="submit"
-              className="w-full bg-[#006F5F] text-white py-3 rounded-md font-semibold hover:bg-[#005546] transition"
-            >
-              Submit
-            </button>
-
-          </form>
-        </div>
-      </div>
+        {status === "SUCCESS" && (
+          <p className="text-green-600 mt-3">✅ Message sent successfully</p>
+        )}
+        {status === "ERROR" && (
+          <p className="text-red-600 mt-3">❌ Failed. Try again.</p>
+        )}
+      </form>
     </section>
   );
 }
