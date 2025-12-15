@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Stats from "./components/Stats";
+import StatsSection from "./components/StatsSection";
 import InstallSection from "./components/InstallSection";
 import WhyChooseUs from "./components/WhyChooseUs";
 import AboutSection from "./components/AboutSection";
@@ -18,7 +18,7 @@ function App() {
   <>
       <Header />
       <Hero />
-      <Stats />
+      <StatsSection />
       <InstallSection />
       <WhyChooseUs />
       <AboutSection /> 
