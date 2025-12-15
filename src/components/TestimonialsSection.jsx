@@ -1,4 +1,4 @@
-import testimg from "../assets/testi-img.png";
+import testimg from "../assets/Icon.png";
 
 export default function TestimonialsSection() {
   const testimonials = [
