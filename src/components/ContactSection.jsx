@@ -1,66 +1,110 @@
-import { useState } from "react";
+import React from "react";
 
 export default function ContactSection() {
-  const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState("");
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
-
-    const form = e.target;
-    const data = {
-      name: form.name.value,
-      phone: form.phone.value,
-      email: form.email.value,
-      message: form.message.value,
-    };
-
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-
-      if (res.ok) {
-        setStatus("SUCCESS");
-        form.reset();
-      } else {
-        setStatus("ERROR");
-      }
-    } catch {
-      setStatus("ERROR");
-    }
-
-    setLoading(false);
+    e.target.submit();
   };
 
   return (
-    <section id="contact" className="py-20 bg-[#e9faf6]">
-      <form
-        onSubmit={handleSubmit}
-        className="bg-white max-w-xl mx-auto p-8 rounded-xl shadow"
-      >
-        <input name="name" placeholder="Name*" required className="input" />
-        <input name="phone" placeholder="Number*" required className="input" />
-        <input name="email" type="email" placeholder="Email*" required className="input" />
-        <textarea name="message" placeholder="Message" className="input" />
+    <section
+      id="contact"
+      className="w-full py-20 bg-[#e9faf5]"
+    >
+      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-        <button
-          disabled={loading}
-          className="w-full bg-[#0b6b57] text-white py-3 rounded-lg"
+        {/* LEFT CONTENT */}
+        <div>
+          <h2 className="text-4xl font-bold text-[#0b6b57] mb-4">
+            Lorem Ipsum<br />Simply Dummy
+          </h2>
+
+          <p className="text-gray-700 mb-6">
+            Lorem Ipsum Is Simply Dummy Printing And Typesetting.
+          </p>
+
+          <p className="text-gray-700 mb-6">
+            Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting.
+          </p>
+
+          <div className="space-y-3 text-[#0b6b57]">
+            <p>📧 info@loremipsum.com</p>
+            <p>📞 +0 9876-54321</p>
+          </div>
+        </div>
+
+        {/* RIGHT FORM */}
+        <form
+          action="https://formsubmit.co/YOUR_EMAIL_HERE"
+          method="POST"
+          onSubmit={handleSubmit}
+          className="bg-white p-8 rounded-xl shadow-lg"
         >
-          {loading ? "Sending..." : "Submit"}
-        </button>
+          {/* Disable Captcha */}
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input
+            type="hidden"
+            name="_subject"
+            value="New SwiftRooms Enquiry"
+          />
 
-        {status === "SUCCESS" && (
-          <p className="text-green-600 mt-3">✅ Message sent successfully</p>
-        )}
-        {status === "ERROR" && (
-          <p className="text-red-600 mt-3">❌ Failed. Try again.</p>
-        )}
-      </form>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+            {/* Name */}
+            <input
+              type="text"
+              name="name"
+              placeholder="Name*"
+              required
+              className="border rounded-md px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-[#0b6b57]"
+            />
+
+            {/* Number */}
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Number*"
+              required
+              className="border rounded-md px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-[#0b6b57]"
+            />
+
+            {/* Email */}
+            <input
+              type="email"
+              name="email"
+              placeholder="Email*"
+              required
+              className="md:col-span-2 border rounded-md px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-[#0b6b57]"
+            />
+
+            {/* Message */}
+            <textarea
+              name="message"
+              placeholder="Message"
+              rows="4"
+              className="md:col-span-2 border rounded-md px-4 py-3 w-full resize-none focus:outline-none focus:ring-2 focus:ring-[#0b6b57]"
+            />
+          </div>
+
+          {/* Checkbox */}
+          <div className="flex items-start gap-2 mt-4 text-sm text-gray-600">
+            <input type="checkbox" required className="mt-1" />
+            <span>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </span>
+          </div>
+
+          {/* Submit Button */}
+          <button
+            type="submit"
+            className="mt-6 w-full bg-[#0b6b57] text-white py-3 rounded-lg hover:bg-[#094f41] transition"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
     </section>
   );
 }
