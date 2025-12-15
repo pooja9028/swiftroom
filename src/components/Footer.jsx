@@ -1,4 +1,5 @@
 import { FaFacebookF, FaTelegramPlane, FaInstagram } from "react-icons/fa";
+import Footer from "/src/assets/Swiftrooms-footer.png";
 
 export default function Footer() {
   return (
@@ -10,7 +11,7 @@ export default function Footer() {
 
           {/* COLUMN 1 */}
           <div>
-            <img src="/src/assets/Swiftrooms-footer.png" alt="SwiftRooms" className="w-40 mb-4" />
+            <img src={Footer} alt="SwiftRooms" className="w-40 mb-4" />
 
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae augue at lorem
