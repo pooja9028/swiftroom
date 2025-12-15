@@ -1,28 +1,30 @@
+import testimg from "../assets/testi-img.png";
+
 export default function TestimonialsSection() {
   const testimonials = [
     {
       name: "Lana Bernier",
       role: "Lorem ipsum",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae arcu a felis placerat tincidunt. Curabitur lacinia, ligula vitae aliquam faucibus.",
-      img: "/src/assets/testi-img.png", // avatar image
+      img: {testimg}, // avatar image
     },
     {
       name: "Lana Bernier",
       role: "Lorem ipsum",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae arcu a felis placerat tincidunt. Curabitur lacinia, ligula vitae aliquam faucibus.",
-      img: "/src/assets/testi-img.png",
+      img: {testimg},
     },
     {
       name: "Lana Bernier",
       role: "Lorem ipsum",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae arcu a felis placerat tincidunt. Curabitur lacinia, ligula vitae aliquam faucibus.",
-      img: "/src/assets/testi-img.png",
+      img: {testimg},
     },
     {
       name: "Lana Bernier",
       role: "Lorem ipsum",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae arcu a felis placerat tincidunt. Curabitur lacinia, ligula vitae aliquam faucibus.",
-      img: "/src/assets/testi-img.png",
+      img: {testimg},
     },
   ];
 
