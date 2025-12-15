@@ -1,5 +1,5 @@
 import { FaFacebookF, FaTelegramPlane, FaInstagram } from "react-icons/fa";
-import Footer from "/src/assets/Swiftrooms-footer.png";
+import Footer from "../assets/Swiftrooms-footer.png";
 
 export default function Footer() {
   return (
