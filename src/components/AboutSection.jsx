@@ -1,3 +1,5 @@
+import aboutImage from "../assets/about-us.png";
+
 export default function AboutSection() {
   return (
     <section id="about" className="w-full bg-[#D4EFE8]">
@@ -6,7 +8,7 @@ export default function AboutSection() {
         {/* LEFT SIDE IMAGE */}
         <div>
           <img
-            src="/src/assets/about-us.png"
+            src={aboutImage}
             alt="About Us"
             className="w-full h-full object-cover"
           />
