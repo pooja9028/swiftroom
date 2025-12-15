@@ -5,22 +5,22 @@ export default function WhyChooseUs() {
     {
       title: "Lorem is",
       desc: "On the other hand, we denounce with righteous end indignation and dislike men who are so beguiled and.",
-      icon: {Icon}, // update with your icon file
+      icon: Icon, // update with your icon file
     },
     {
       title: "Lorem is",
       desc: "On the other hand, we denounce with righteous end indignation and dislike men who are so beguiled and.",
-      icon: {Icon},
+      icon: Icon,
     },
     {
       title: "Lorem is",
       desc: "On the other hand, we denounce with righteous end indignation and dislike men who are so beguiled and.",
-      icon: {Icon},
+      icon: Icon,
     },
     {
       title: "Lorem is",
       desc: "On the other hand, we denounce with righteous end indignation and dislike men who are so beguiled and.",
-      icon: {Icon},
+      icon: Icon,
     },
   ];
 
