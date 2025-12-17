@@ -17,7 +17,8 @@ export default function InstallSection() {
         <div className="text-center mb-10">
           <h2 className="text-4xl font-bold text-[#075a4f]">What We Install</h2>
           <p className="text-gray-500 mt-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel lobortis justo
+            Premium installation services for doors, windows, skylights, and outdoor living solutions.
+
           </p>
         </div>
 
