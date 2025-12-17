@@ -2,6 +2,8 @@ import productImg from "../assets/Img-product.png";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import { useNavigate } from "react-router-dom";
+
 
 const installs = [
   { title: "Aluminum Sliding Door", image: productImg },
