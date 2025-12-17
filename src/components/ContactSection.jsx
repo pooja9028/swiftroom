@@ -36,7 +36,7 @@ export default function ContactSection() {
             </a>
           </div>
           <div className="flex items-center gap-3">
-            <FaMap className="text-[#006F5F] text-xl" />
+            <FaPhone className="text-[#006F5F] text-xl" />
            <p>Showroom:
 ET JAR - J1 Complex
 
