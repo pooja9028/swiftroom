@@ -36,7 +36,7 @@ export default function ContactSection() {
             </a>
           </div>
           <div className="flex items-center gap-3">
-            
+            <FaPhone className="text-[#FFFFF] text-xl" />
            <p>Showroom:
 ET JAR - J1 Complex
 
