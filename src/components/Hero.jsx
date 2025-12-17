@@ -126,7 +126,7 @@ export default function Hero() {
 
             <label className="flex items-start gap-2 text-sm text-gray-600">
               <input type="checkbox" required />
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              I agree to be contacted regarding my enquiry.
             </label>
 
             <button

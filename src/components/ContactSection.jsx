@@ -138,7 +138,7 @@ Exceptional Together
             <textarea
               rows="4"
               name="message"
-              placeholder="Lorem Ipsum is simply?"
+              placeholder="Message"
               value={formData.message}
               onChange={handleChange}
               className="w-full border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-600"

@@ -1,48 +1,37 @@
 import productImg from "../assets/Img-product.png";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import emailjs from "@emailjs/browser";
-import { useNavigate } from "react-router-dom";
 
 const installs = [
-  { title: "Aluminum Sliding Door", image: productImg },
-  { title: "Aluminium Bi-Folding Doors", image: productImg },
-  { title: "Aluminium Windows", image: productImg },
-  { title: "PVCu Windows & Door", image: productImg },
+  {
+    title: "Aluminum Sliding Door",
+    image:
+      productImg,
+  },
+  {
+    title: "Aluminium Bi-Folding Doors",
+    image:
+      productImg,
+  },
+  {
+    title: "Aluminium Windows",
+    image:
+      productImg,
+  },
+  {
+    title: "PVCu Windows & Door",
+    image:
+      productImg,
+  },
 ];
 
 export default function InstallSection() {
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState("");
-  const formRef = useRef();
-  const navigate = useNavigate();
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_9mi4xc9",
-        "template_s86a7ha",
-        formRef.current,
-        "w0cj1NthlgaWvcBNi"
-      )
-      .then(
-        () => {
-          setOpen(false);
-          navigate("/thank-you");
-        },
-        (error) => {
-          alert("Failed to send enquiry. Please try again.");
-          console.error(error);
-        }
-      );
-  };
 
   return (
     <section className="w-full py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 text-center">
-
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -80,9 +69,11 @@ export default function InstallSection() {
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-full object-cover group-hover:scale-110 transition"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
+
               <div className="absolute inset-0 bg-black/40" />
+
               <h3 className="absolute bottom-4 left-4 right-4 text-white text-lg font-semibold">
                 {item.title}
               </h3>
@@ -114,50 +105,57 @@ export default function InstallSection() {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
-              className="bg-white rounded-2xl max-w-md w-full p-6"
+              className="bg-white rounded-2xl max-w-md w-full p-6 text-left"
             >
-              <div className="flex justify-between mb-4">
-                <h3 className="text-xl font-semibold">Enquiry Form</h3>
-                <button onClick={() => setOpen(false)}>✕</button>
+              <div className="flex justify-between items-center mb-4">
+                <h3 className="text-xl font-semibold">
+                  Enquiry Form
+                </h3>
+                <button
+                  onClick={() => setOpen(false)}
+                  className="text-gray-400 hover:text-black"
+                >
+                  ✕
+                </button>
               </div>
 
-              <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
-                <input type="hidden" name="product" value={selected} />
+              {selected && (
+                <p className="text-sm text-gray-600 mb-4">
+                  Product: <span className="font-medium">{selected}</span>
+                </p>
+              )}
 
+              <form className="space-y-4">
                 <input
-                  name="from_name"
                   type="text"
                   placeholder="Your Name"
-                  required
-                  className="w-full border px-4 py-3 rounded-lg"
+                  className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-600"
                 />
-
                 <input
-                  name="from_email"
                   type="email"
                   placeholder="Email Address"
-                  required
-                  className="w-full border px-4 py-3 rounded-lg"
+                  className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-600"
                 />
-
+                
                 <input
-                  name="phone"
                   type="tel"
                   placeholder="Phone Number"
-                  required
-                  className="w-full border px-4 py-3 rounded-lg"
+                  className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-600"
                 />
-
+                <input
+                  type="text"
+                  placeholder="Industry"
+                  className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-600"
+                />
                 <textarea
-                  name="message"
                   placeholder="Message"
                   rows="3"
-                  className="w-full border px-4 py-3 rounded-lg"
+                  className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-600"
                 />
 
                 <button
                   type="submit"
-                  className="w-full py-3 bg-emerald-700 text-white rounded-lg"
+                  className="w-full py-3 rounded-lg bg-emerald-700 text-white font-semibold hover:bg-emerald-800 transition"
                 >
                   Send Enquiry
                 </button>
