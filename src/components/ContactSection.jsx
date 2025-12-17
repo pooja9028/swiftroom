@@ -1,6 +1,7 @@
 import { FaEnvelope, FaPhone } from "react-icons/fa";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { useNavigate } from "react-router-dom";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -10,7 +11,7 @@ export default function ContactSection() {
     industry: "",
     message: "",
   });
-
+  const navigate = useNavigate();
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -45,6 +46,7 @@ export default function ContactSection() {
       industry: "",
       message: "",
     });
+    navigate("/thank-you");
   })
   .catch((error) => {
     console.error("EmailJS Error:", error);
