@@ -3,23 +3,23 @@ import Icon from "../assets/Icon.png";
 export default function WhyChooseUs() {
   const items = [
     {
-      title: "1. Premium Quality Materials",
+      title: "Premium Quality Materials",
       desc: "We use high-grade aluminium, glass, and uPVC materials that ensure strength, durability, and long-term performance.",
       icon: Icon, // update with your icon file
     },
     {
-      title: "Aluminium Bi-Folding Doors",
-      desc: "Seamless indoor-outdoor connection with maximum opening space.",
+      title: "Expert Installation Team",
+      desc: "Our trained professionals deliver precise installations with attention to every detail.",
       icon: Icon,
     },
     {
-      title: "Aluminium Windows",
-      desc: "Energy-efficient windows built for durability and elegance.",
+      title: "Custom-Built Solutions",
+      desc: "Every project is tailored to match your space, style, and functional needs.",
       icon: Icon,
     },
     {
-      title: "Aluminium Doors",
-      desc: "Strong, secure, and stylish door solutions for all spaces.",
+      title: "Trusted by Thousands",
+      desc: "With thousands of completed projects, we are a name customers rely on across the UAE.",
       icon: Icon,
     },
   ];
