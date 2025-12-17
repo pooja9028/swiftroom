@@ -40,7 +40,7 @@ export default function ContactSection() {
            Showroom:
 ET JAR - J1 Complex
 
-Block A,<br> Warehouse 11-12
+Block A,<br/> Warehouse 11-12
 
 Jebel Ali, Ind Area 1
           </div>
