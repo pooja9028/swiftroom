@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
+
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -36,7 +38,14 @@ export default function Header() {
         <div className="max-w-[1300px] mx-auto flex items-center justify-between py-4 px-4">
 
           {/* Logo */}
-          <img src={logo} alt="Swiftrooms Logo" className="h-10 object-contain" />
+          <Link to="/">
+  <img
+    src={logo}
+    alt="Swiftrooms Logo"
+    className="h-10 object-contain cursor-pointer"
+  />
+</Link>
+
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex gap-8 text-[16px] font-medium text-gray-800">

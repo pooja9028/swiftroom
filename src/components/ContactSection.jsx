@@ -46,7 +46,7 @@ export default function ContactSection() {
       industry: "",
       message: "",
     });
-    navigate("/thank-you");
+    navigate("/thank-you"); //
   })
   .catch((error) => {
     console.error("EmailJS Error:", error);
