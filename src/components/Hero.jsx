@@ -12,10 +12,7 @@ export default function Hero() {
   });
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
@@ -23,16 +20,10 @@ export default function Hero() {
 
     emailjs
       .send(
-        "service_9mi4xc9",          // ✅ Service ID
-        "template_s86a7ha",         // 🔴 REPLACE with your WORKING custom template ID
-        {
-          name: formData.name,
-          number: formData.number,
-          email: formData.email,
-          industry: formData.industry,
-          message: formData.message,
-        },
-        "w0cj1NthlgaWvcBNi"          // ✅ Public Key
+        "service_9mi4xc9",
+        "template_s86a7ha",
+        formData,
+        "w0cj1NthlgaWvcBNi"
       )
       .then(() => {
         alert("Your request has been submitted successfully!");
@@ -44,40 +35,42 @@ export default function Hero() {
           message: "",
         });
       })
-      .catch((error) => {
-        console.error("EmailJS Error:", error);
-        alert("Something went wrong. Please try again.");
-      });
+      .catch(() => alert("Something went wrong. Please try again."));
   };
 
   return (
     <section
-      id="home"
-      className="relative w-full h-[780px] bg-cover bg-center flex items-center"
-      style={{ backgroundImage: `url(${heroImage})` }}
-    >
-      {/* LEFT TEXT */}
-      <div className="w-[55%] text-white pl-20">
-        <h1 className="text-5xl font-bold leading-tight mb-4">
-          Your Vision. <br />
-          Our Systems. <br />
-          One Exceptional Space.
-        </h1>
+  id="home"
+  className="relative w-full bg-cover bg-center pt-[120px] lg:pt-0"
+  style={{ backgroundImage: `url(${heroImage})` }}
+>
 
-        <p className="text-lg max-w-lg">
-          Swift Rooms UAE’s premier provider of garden rooms, aluminium
-          windows and doors.
-        </p>
-      </div>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/30"></div>
 
-      {/* RIGHT FORM */}
-      <div className="absolute right-20 top-1/2 -translate-y-1/2">
-        <div className="bg-white rounded-xl shadow-xl p-8 w-[380px]">
+      <div className="relative max-w-7xl mx-auto px-6 py-20 lg:py-32 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-          <h2 className="text-xl font-semibold mb-4">Request a Quote</h2>
+        {/* LEFT TEXT */}
+        <div className="text-white">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
+            Your Vision. <br />
+            Our Systems. <br />
+            One Exceptional Space.
+          </h1>
+
+          <p className="text-base sm:text-lg max-w-lg">
+            Swift Rooms UAE’s premier provider of garden rooms, aluminium
+            windows and doors.
+          </p>
+        </div>
+
+        {/* RIGHT FORM */}
+        <div className="bg-white rounded-xl shadow-xl p-6 sm:p-8 w-full max-w-md mx-auto lg:mx-0">
+          <h2 className="text-xl font-semibold mb-4 text-gray-900">
+            Request a Quote
+          </h2>
 
           <form onSubmit={handleSubmit} className="space-y-4">
-
             <input
               name="name"
               value={formData.name}
@@ -87,7 +80,7 @@ export default function Hero() {
               required
             />
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <input
                 name="number"
                 value={formData.number}
@@ -136,8 +129,8 @@ export default function Hero() {
               Submit
             </button>
           </form>
-
         </div>
+
       </div>
     </section>
   );
