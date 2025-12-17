@@ -36,11 +36,11 @@ export default function ContactSection() {
             </a>
           </div>
           <div className="flex items-center gap-3">
-            <FaPhone className="text-[#006F5F] text-xl" />
+            <FaMap className="text-[#006F5F] text-xl" />
            Showroom:
 ET JAR - J1 Complex
 
-Block A, Warehouse 11-12
+Block A,<br> Warehouse 11-12
 
 Jebel Ali, Ind Area 1
           </div>
