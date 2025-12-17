@@ -14,8 +14,7 @@ export default function Footer() {
             <img src={FooterImage} alt="SwiftRooms" className="w-40 mb-4" />
 
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae augue at lorem
-              pretium feugiat vel quis magna.
+              Swift Rooms UAE’s premier provider of garden rooms, aluminium windows and doors.
             </p>
 
             <div className="border border-gray-700 w-full my-4"></div>
@@ -41,34 +40,33 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-gray-400 text-sm">
-              <li>Lorem ipsum</li>
-              <li>Dolor sit amet</li>
-              <li>Consectetur</li>
-              <li>Adipiscing elit</li>
-              <li>Sed do eiusmod</li>
+            
+              <li>About Us</li>
+              <li>Services</li>
+              <li>Why Choose Us</li>
+              <li>Testimonials</li>
             </ul>
           </div>
 
           {/* COLUMN 4 – Support */}
           <div>
-            <h3 className="font-semibold mb-4">Support</h3>
+            <h3 className="font-semibold mb-4">Showroom:</h3>
             <ul className="space-y-2 text-gray-400 text-sm">
-              <li>Lorem support</li>
-              <li>Help center</li>
+              <li>ET JAR - J1 Complex</li>
+              <li>Block A, Warehouse 11-12</li>
               <li>Contact lorem</li>
-              <li>Terms & conditions</li>
+              <li>Jebel Ali, Ind Area 1</li>
             </ul>
           </div>
 
           {/* COLUMN 5 – Company */}
           <div>
-            <h3 className="font-semibold mb-4">Company</h3>
+            <h3 className="font-semibold mb-4">FACTORY:</h3>
             <ul className="space-y-2 text-gray-400 text-sm">
-              <li>Lorem ipsum</li>
-              <li>Dolor sit amet</li>
-              <li>Consectetur</li>
-              <li>Adipiscing elit</li>
-              <li>Sed do eiusmod</li>
+              <li>Dubai Real Estate Centre Ind Park</li>
+              <li>Unit 1-B, Jebel Ali, Ind Area 1</li>
+              <li>Factory: 04 323 1625</li>
+              
             </ul>
           </div>
 
