@@ -9,7 +9,7 @@ import AboutSection from "./components/AboutSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
-import ThankYou from "./components/ThankYou";
+import ThankYou from "./pages/ThankYou";
 
 function HomePage() {
   return (
