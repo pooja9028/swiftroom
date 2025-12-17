@@ -24,24 +24,22 @@ export default function AboutSection() {
 
           {/* Main Heading */}
           <h2 className="text-4xl font-bold text-[#0b3d2e] leading-snug">
-            Built to Last. Designed to Elevate  
+            Built to Last. Designed to Elevate Your Living Space.
+ 
             <br />
             Your Living Space.
           </h2>
 
           {/* Subtitle */}
           <p className="text-gray-600 mt-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed 
-            tristique metus proin id lorem odio.
+            At Swift Rooms, we specialise in designing and installing premium garden rooms, aluminium windows, doors, and glass systems that enhance modern living.
           </p>
 
           {/* Paragraph 2 */}
           <p className="text-gray-700 mt-6 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae arcu 
-            a felis placerat tincidunt. Curabitur lacinia, ligula vitae aliquam 
-            faucibus, justo risus laoreet neque, non suscipit sapien lorem vel erat. 
-            Integer ac ipsum at orci cursus ultricies. Duis nec sem id nunc 
-            consectetur sollicitudin. Vestibulum ante ipsum primis in faucibus.
+           
+Our focus is on delivering functional, elegant, and durable solutions that blend seamlessly with your home or commercial space. From concept to completion, we ensure quality, precision, and customer satisfaction at every step.
+
           </p>
 
           {/* Submit Button */}
