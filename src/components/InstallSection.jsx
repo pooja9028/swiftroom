@@ -1,3 +1,4 @@
+import productImg from "../assets/Img-product.png";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -5,26 +6,26 @@ const installs = [
   {
     title: "Aluminum Sliding Door",
     image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+      productImg,
   },
   {
     title: "Aluminium Bi-Folding Doors",
     image:
-      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
+      productImg,
   },
   {
     title: "Aluminium Windows",
     image:
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d",
+      productImg,
   },
   {
     title: "PVCu Windows & Door",
     image:
-      "https://images.unsplash.com/photo-1582582429416-3a8a1b7d8b5c",
+      productImg,
   },
 ];
 
-export default function WhatWeInstall() {
+export default function InstallSection() {
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState("");
 
