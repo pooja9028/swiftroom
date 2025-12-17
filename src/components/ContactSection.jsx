@@ -20,20 +20,29 @@ export default function ContactSection() {
             Get in touch with our team today for a free consultation and site visit.
           </p>
 
-          <h3 className="font-semibold text-gray-900 mb-4">LOREM IPSUM</h3>
+          <h3 className="font-semibold text-gray-900 mb-4">Contact Info</h3>
 
           <div className="flex items-center gap-3 mb-4">
             <FaEnvelope className="text-[#006F5F] text-xl" />
-            <a href="mailto:info@loremipsum.com" className="text-lg text-gray-900">
-              info@loremipsum.com
+            <a href="mailto:Hello@swiftrooms.ae" className="text-lg text-gray-900">
+              Hello@swiftrooms.ae
             </a>
           </div>
 
           <div className="flex items-center gap-3">
             <FaPhone className="text-[#006F5F] text-xl" />
             <a href="tel:+0987654321" className="text-lg text-gray-900">
-              +0 9876-54321
+             043474240
             </a>
+          </div>
+          <div className="flex items-center gap-3">
+            <FaPhone className="text-[#006F5F] text-xl" />
+           Showroom:
+ET JAR - J1 Complex
+
+Block A, Warehouse 11-12
+
+Jebel Ali, Ind Area 1
           </div>
         </div>
 
