@@ -147,7 +147,7 @@ Exceptional Together
             <div className="flex items-start gap-3">
               <input type="checkbox" required className="mt-1" />
               <p className="text-gray-600 text-sm">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+               I agree to be contacted regarding my enquiry
               </p>
             </div>
 
