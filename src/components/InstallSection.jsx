@@ -1,37 +1,75 @@
 import productImg from "../assets/Img-product.png";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
 const installs = [
-  {
-    title: "Aluminum Sliding Door",
-    image:
-      productImg,
-  },
-  {
-    title: "Aluminium Bi-Folding Doors",
-    image:
-      productImg,
-  },
-  {
-    title: "Aluminium Windows",
-    image:
-      productImg,
-  },
-  {
-    title: "PVCu Windows & Door",
-    image:
-      productImg,
-  },
+  { title: "Aluminum Sliding Door", image: productImg },
+  { title: "Aluminium Bi-Folding Doors", image: productImg },
+  { title: "Aluminium Windows", image: productImg },
+  { title: "PVCu Windows & Door", image: productImg },
 ];
 
 export default function InstallSection() {
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState("");
 
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    number: "",
+    industry: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .send(
+        "service_9mi4xc9",        // ✅ Service ID
+        "template_s86a7ha",       // ✅ Template ID
+        {
+          from_name: formData.name,
+          reply_to: formData.email,
+          name: formData.name,
+          email: formData.email,
+          number: formData.number,
+          industry: formData.industry,
+          message: `Product: ${selected}\n${formData.message}`,
+        },
+        "w0cj1NthlgaWvcBNi"        // ✅ Public Key
+      )
+      .then(() => {
+        alert("Your enquiry has been sent successfully!");
+
+        setFormData({
+          name: "",
+          email: "",
+          number: "",
+          industry: "",
+          message: "",
+        });
+
+        setOpen(false);
+      })
+      .catch((error) => {
+        console.error("EmailJS Error:", error);
+        alert("Failed to send enquiry. Please try again.");
+      });
+  };
+
   return (
     <section className="w-full py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 text-center">
+
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -84,7 +122,10 @@ export default function InstallSection() {
         {/* Button */}
         <div className="mt-14">
           <button
-            onClick={() => setOpen(true)}
+            onClick={() => {
+              setSelected("");
+              setOpen(true);
+            }}
             className="px-10 py-4 rounded-full bg-emerald-700 text-white font-semibold hover:bg-emerald-800 transition"
           >
             Submit Enquiry
@@ -108,9 +149,7 @@ export default function InstallSection() {
               className="bg-white rounded-2xl max-w-md w-full p-6 text-left"
             >
               <div className="flex justify-between items-center mb-4">
-                <h3 className="text-xl font-semibold">
-                  Enquiry Form
-                </h3>
+                <h3 className="text-xl font-semibold">Enquiry Form</h3>
                 <button
                   onClick={() => setOpen(false)}
                   className="text-gray-400 hover:text-black"
@@ -125,32 +164,54 @@ export default function InstallSection() {
                 </p>
               )}
 
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={handleSubmit}>
                 <input
                   type="text"
+                  name="name"
                   placeholder="Your Name"
-                  className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-600"
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="w-full border rounded-lg px-4 py-3"
                 />
+
                 <input
                   type="email"
+                  name="email"
                   placeholder="Email Address"
-                  className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-600"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full border rounded-lg px-4 py-3"
                 />
-                
+
                 <input
                   type="tel"
+                  name="number"
                   placeholder="Phone Number"
-                  className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-600"
+                  required
+                  value={formData.number}
+                  onChange={handleChange}
+                  className="w-full border rounded-lg px-4 py-3"
                 />
+
                 <input
                   type="text"
+                  name="industry"
                   placeholder="Industry"
-                  className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-600"
+                  required
+                  value={formData.industry}
+                  onChange={handleChange}
+                  className="w-full border rounded-lg px-4 py-3"
                 />
+
                 <textarea
+                  name="message"
                   placeholder="Message"
                   rows="3"
-                  className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-600"
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="w-full border rounded-lg px-4 py-3"
                 />
 
                 <button
