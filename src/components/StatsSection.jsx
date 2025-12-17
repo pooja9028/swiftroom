@@ -1,6 +1,6 @@
 import CountUp from "react-countup";
 
-export default function Stats() {
+export default function StatsSection() {
   return (
     <section className="w-full py-20">
       <div className="max-w-6xl mx-auto bg-[#0b6b57] text-white rounded-xl py-12 px-10">
@@ -36,7 +36,7 @@ export default function Stats() {
             <h2 className="text-5xl font-bold">
               <CountUp start={0} end={70} duration={3} />+
             </h2>
-            <p className="text-lg mt-2 opacity-90">Trained Staff</p>
+            <p className="text-lg mt-2 opacity-90">Trained Professionals</p>
           </div>
 
         </div>

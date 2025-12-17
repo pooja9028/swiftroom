@@ -15,8 +15,8 @@ export default function Hero() {
         </h1>
 
         <p className="text-lg max-w-lg">
-          Swift Rooms UAE’s premier provider of garden rooms, aluminium
-          windows and doors.
+          Swift Rooms UAE’s trusted provider of garden rooms, aluminium windows, doors, and bespoke glass solutions.
+
         </p>
       </div>
 
@@ -44,11 +44,12 @@ export default function Hero() {
 
             <label className="flex items-start gap-2 text-sm text-gray-600">
               <input type="checkbox" />
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              I agree to be contacted regarding my enquiry.
+
             </label>
 
             <button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-lg">
-              Submit
+              Get a Free Quote
             </button>
           </form>
 
