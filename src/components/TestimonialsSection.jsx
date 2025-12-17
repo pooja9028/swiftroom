@@ -41,8 +41,8 @@ export default function TestimonialsSection() {
           Testimonials & Reviews
         </h2>
         <p className="text-gray-700 mt-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel
-          lobortis justo
+          What our customers say about working with Swift Rooms.
+
         </p>
       </div>
 

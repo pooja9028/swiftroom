@@ -8,15 +8,16 @@ export default function ContactSection() {
         {/* LEFT SIDE */}
         <div>
           <h2 className="text-4xl font-bold text-gray-900 leading-snug mb-6">
-            Lorem Ipsum <br /> Simply Dummy
+            Let’s Build Something 
+ <br /> Exceptional Together
           </h2>
 
           <p className="text-gray-700 mb-6">
-            Lorem Ipsum Is Simply Dummy Printing And Typesetting
+            Have a project in mind?
           </p>
 
           <p className="text-gray-700 mb-6">
-            Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting.
+            Get in touch with our team today for a free consultation and site visit.
           </p>
 
           <h3 className="font-semibold text-gray-900 mb-4">LOREM IPSUM</h3>
