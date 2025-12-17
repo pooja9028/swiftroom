@@ -26,7 +26,7 @@ function App() {
             <InstallSection />
             <WhyChooseUs />
             <AboutSection />
-            <TestimonialSection />
+            <TestimonialsSection />
             <ContactSection />
             <Footer />
           </>
@@ -41,3 +41,4 @@ function App() {
 }
 
 export default App;
+
