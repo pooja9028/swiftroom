@@ -8,26 +8,36 @@ import AboutSection from "./components/AboutSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
-
-
+import { Routes, Route } from "react-router-dom";
+import ThankYou from "./pages/ThankYou";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-  <>
-      <Header />
-      <Hero />
-      <StatsSection />
-      <InstallSection />
-      <WhyChooseUs />
-      <AboutSection /> 
-      <TestimonialsSection />   
-       <ContactSection />
-       <Footer />
-    </>
-);
+    <Routes>
 
+      {/* Home Page */}
+      <Route
+        path="/"
+        element={
+          <>
+            <Header />
+            <Hero />
+            <StatsSection />
+            <InstallSection />
+            <WhyChooseUs />
+            <AboutSection />
+            <TestimonialSection />
+            <ContactSection />
+            <Footer />
+          </>
+        }
+      />
+
+      {/* Thank You Page */}
+      <Route path="/thank-you" element={<ThankYou />} />
+
+    </Routes>
+  );
 }
 
-export default App
+export default App;
