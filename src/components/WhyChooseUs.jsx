@@ -3,23 +3,23 @@ import Icon from "../assets/Icon.png";
 export default function WhyChooseUs() {
   const items = [
     {
-      title: "Lorem is",
-      desc: "On the other hand, we denounce with righteous end indignation and dislike men who are so beguiled and.",
+      title: "1. Premium Quality Materials",
+      desc: "We use high-grade aluminium, glass, and uPVC materials that ensure strength, durability, and long-term performance.",
       icon: Icon, // update with your icon file
     },
     {
-      title: "Lorem is",
-      desc: "On the other hand, we denounce with righteous end indignation and dislike men who are so beguiled and.",
+      title: "Aluminium Bi-Folding Doors",
+      desc: "Seamless indoor-outdoor connection with maximum opening space.",
       icon: Icon,
     },
     {
-      title: "Lorem is",
-      desc: "On the other hand, we denounce with righteous end indignation and dislike men who are so beguiled and.",
+      title: "Aluminium Windows",
+      desc: "Energy-efficient windows built for durability and elegance.",
       icon: Icon,
     },
     {
-      title: "Lorem is",
-      desc: "On the other hand, we denounce with righteous end indignation and dislike men who are so beguiled and.",
+      title: "Aluminium Doors",
+      desc: "Strong, secure, and stylish door solutions for all spaces.",
       icon: Icon,
     },
   ];
@@ -31,7 +31,8 @@ export default function WhyChooseUs() {
         {/* Heading */}
         <h2 className="text-4xl font-bold text-[#0b3d2e]">Why Choose Us</h2>
         <p className="text-gray-500 mt-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel lobortis justo
+          Quality craftsmanship, reliable service, and results you can trust.
+
         </p>
 
         {/* Cards */}
