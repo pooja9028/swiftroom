@@ -15,6 +15,8 @@ const installs = [
 export default function InstallSection() {
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState("");
+  const navigate = useNavigate();
+
 
   const [formData, setFormData] = useState({
     name: "",
@@ -61,6 +63,7 @@ export default function InstallSection() {
         });
 
         setOpen(false);
+        navigate("/thank-you"); // ✅ THIS WAS MISSING
       })
       .catch((error) => {
         console.error("EmailJS Error:", error);
