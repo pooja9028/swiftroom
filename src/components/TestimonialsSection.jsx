@@ -1,29 +1,29 @@
-import testimg from "../assets/testi-img.png";
+import testimg from "../assets/user.jpg";
 
 export default function TestimonialsSection() {
   const testimonials = [
     {
-      name: "Lana Bernier",
-      role: "Lorem ipsum",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae arcu a felis placerat tincidunt. Curabitur lacinia, ligula vitae aliquam faucibus.",
+      name: "Prashant Karuthasen",
+      role: "",
+      text: "Absolutely great service! The team were very responsive and Jibran was an excellent project manager. Would highly recommend them.",
       img: testimg, // avatar image
     },
     {
-      name: "Lana Bernier",
-      role: "Lorem ipsum",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae arcu a felis placerat tincidunt. Curabitur lacinia, ligula vitae aliquam faucibus.",
+      name: "Willem Moelker",
+      role: "",
+      text: "As always the best of service, big thank you to Imran and his team for their tidy workmanship ",
       img: testimg,
     },
     {
-      name: "Lana Bernier",
-      role: "Lorem ipsum",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae arcu a felis placerat tincidunt. Curabitur lacinia, ligula vitae aliquam faucibus.",
+      name: "Salma Kayali",
+      role: "",
+      text: "The team was absolutely brilliant. Super friendly, explained the issue, was proactive, and didn't over charge.",
       img: testimg,
     },
     {
-      name: "Lana Bernier",
-      role: "Lorem ipsum",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae arcu a felis placerat tincidunt. Curabitur lacinia, ligula vitae aliquam faucibus.",
+      name: "Vishnu .v",
+      role: "",
+      text: "Mr. Maaz Khan and team done bifold windows and mashrabiya cladding installation",
       img: testimg,
     },
   ];

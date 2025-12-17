@@ -73,13 +73,7 @@ export default function Footer() {
         </div>
 
         {/* BOTTOM LINKS */}
-        <div className="mt-12 flex flex-wrap gap-6 text-sm text-gray-500 justify-center md:justify-start">
-          <a className="hover:text-white">Privacy Policy</a>
-          <a className="hover:text-white">Terms of Use</a>
-          <a className="hover:text-white">Sales and Refunds</a>
-          <a className="hover:text-white">Legal</a>
-          <a className="hover:text-white">Site Map</a>
-        </div>
+       
 
       </div>
     </footer>
