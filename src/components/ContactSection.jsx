@@ -37,12 +37,12 @@ export default function ContactSection() {
           </div>
           <div className="flex items-center gap-3">
             <FaMap className="text-[#006F5F] text-xl" />
-           Showroom:
+           <p>Showroom:
 ET JAR - J1 Complex
 
-Block A,<br/> Warehouse 11-12
+Block A,</p><br/> <p>Warehouse 11-12
 
-Jebel Ali, Ind Area 1
+Jebel Ali, Ind Area 1</p>
           </div>
         </div>
 
