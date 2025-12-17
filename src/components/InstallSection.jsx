@@ -1,65 +1,162 @@
-import productImg from "../assets/Img-product.png";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-export default function InstallSection() {
-  const products = [
-    { title: "Aluminum Sliding DOOR", price: "AED 7,500" },
-    { title: "ALUMINIUM Bi–FOLDING DOORS", price: "AED 7,500" },
-    { title: "ALUMINIUM Windows", price: "AED 7,500" },
-    { title: "ALUMINIUM DOORS", price: "AED 7,500" },
-    { title: "PVCu Windows & Door", price: "AED 7,500" }
-  ];
+const installs = [
+  {
+    title: "Aluminum Sliding Door",
+    image:
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+  },
+  {
+    title: "Aluminium Bi-Folding Doors",
+    image:
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
+  },
+  {
+    title: "Aluminium Windows",
+    image:
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d",
+  },
+  {
+    title: "PVCu Windows & Door",
+    image:
+      "https://images.unsplash.com/photo-1582582429416-3a8a1b7d8b5c",
+  },
+];
+
+export default function WhatWeInstall() {
+  const [open, setOpen] = useState(false);
+  const [selected, setSelected] = useState("");
 
   return (
-    <section id = "services" className="w-full py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="w-full py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-6 text-center">
+        {/* Heading */}
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl font-bold text-gray-900 mb-4"
+        >
+          What We Install
+        </motion.h2>
 
-        {/* Section Heading */}
-        <div className="text-center mb-10">
-          <h2 className="text-4xl font-bold text-[#075a4f]">What We Install</h2>
-          <p className="text-gray-500 mt-2">
-            Premium installation services for doors, windows, skylights, and outdoor living solutions.
-
-          </p>
-        </div>
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className="text-gray-500 max-w-2xl mx-auto mb-12"
+        >
+          Premium aluminium & PVC solutions designed for modern living.
+        </motion.p>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-          {products.map((item, index) => (
-            <div
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {installs.map((item, index) => (
+            <motion.div
               key={index}
-              className="bg-white shadow-lg rounded-xl p-4 border hover:-translate-y-2 transition duration-300"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.15 }}
+              whileHover={{ scale: 1.03 }}
+              onClick={() => {
+                setSelected(item.title);
+                setOpen(true);
+              }}
+              className="relative h-72 rounded-2xl overflow-hidden cursor-pointer group"
             >
-              <div className="relative w-full h-40 rounded-lg overflow-hidden mb-3">
-                <img src={productImg} alt={item.title} className="w-full h-full object-cover" />
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
 
-                {/* Featured Labels */}
-                <span className="absolute top-2 left-2 bg-green-600 text-white text-xs px-2 py-1 rounded">
-                  Featured
-                </span>
-                <span className="absolute top-8 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded">
-                  For sale
-                </span>
-              </div>
+              <div className="absolute inset-0 bg-black/40" />
 
-              <h3 className="font-semibold text-gray-800 text-sm">{item.title}</h3>
-
-              <p className="text-xs text-gray-500 mt-1 flex items-center gap-1">
-                📍 Downtown, Dubai, UAE
-              </p>
-
-              <p className="text-[#0b6b57] font-bold mt-3">{item.price}</p>
-            </div>
+              <h3 className="absolute bottom-4 left-4 right-4 text-white text-lg font-semibold">
+                {item.title}
+              </h3>
+            </motion.div>
           ))}
         </div>
 
-        {/* Submit Button */}
-        <div className="w-full flex justify-center mt-10">
-          <button onClick={() => document.getElementById("contact").scrollIntoView({ behavior: "smooth" })} className="bg-[#0b6b57] text-white px-10 py-3 rounded-full text-lg font-medium shadow-lg hover:bg-[#0a504c] transition">
+        {/* Button */}
+        <div className="mt-14">
+          <button
+            onClick={() => setOpen(true)}
+            className="px-10 py-4 rounded-full bg-emerald-700 text-white font-semibold hover:bg-emerald-800 transition"
+          >
             Submit Enquiry
           </button>
         </div>
-
       </div>
+
+      {/* Modal */}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center px-4"
+          >
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              className="bg-white rounded-2xl max-w-md w-full p-6 text-left"
+            >
+              <div className="flex justify-between items-center mb-4">
+                <h3 className="text-xl font-semibold">
+                  Enquiry Form
+                </h3>
+                <button
+                  onClick={() => setOpen(false)}
+                  className="text-gray-400 hover:text-black"
+                >
+                  ✕
+                </button>
+              </div>
+
+              {selected && (
+                <p className="text-sm text-gray-600 mb-4">
+                  Product: <span className="font-medium">{selected}</span>
+                </p>
+              )}
+
+              <form className="space-y-4">
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-600"
+                />
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-600"
+                />
+                <input
+                  type="tel"
+                  placeholder="Phone Number"
+                  className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-600"
+                />
+                <textarea
+                  placeholder="Message"
+                  rows="3"
+                  className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-600"
+                />
+
+                <button
+                  type="submit"
+                  className="w-full py-3 rounded-lg bg-emerald-700 text-white font-semibold hover:bg-emerald-800 transition"
+                >
+                  Send Enquiry
+                </button>
+              </form>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
