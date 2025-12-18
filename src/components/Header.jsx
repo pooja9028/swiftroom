@@ -30,7 +30,7 @@ export default function Header() {
 
   {/* Address (Google Maps) */}
   <a
-    href="google.com/maps/place/Swift+Rooms+LLC+-+Windows,+Doors+%26+Luxury+Glass+Rooms/data=!4m2!3m1!1s0x0:0x3409283432368103?sa=X&ved=1t:2428&ictx=111"
+    href="https://maps.app.goo.gl/8aemTf5CET1puKEY8"
     target="_blank"
     rel="noopener noreferrer"
     className="flex items-center gap-2 hover:text-emerald-300 transition"
