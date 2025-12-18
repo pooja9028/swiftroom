@@ -131,14 +131,17 @@ export default function InstallSection() {
         {/* Button */}
         <div className="mt-14">
           <button
-            onClick={() => {
-              setSelected("");
-              setOpen(true);
-            }}
-            className="px-10 py-4 rounded-full bg-emerald-700 text-white font-semibold hover:bg-emerald-800 transition"
-          >
-            Submit Enquiry
-          </button>
+  onClick={() =>
+    document.getElementById("contact")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    })
+  }
+  className="px-10 py-4 rounded-full bg-emerald-700 text-white font-semibold hover:bg-emerald-800 transition"
+>
+  Submit Enquiry
+</button>
+
         </div>
       </div>
 
