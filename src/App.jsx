@@ -20,6 +20,7 @@ function HomePage() {
       <Hero />
       <StatsSection />
       <InstallSection />
+      <AboutSection />
       <WhyChooseUs />
       <AboutSection />
       <TestimonialsSection />

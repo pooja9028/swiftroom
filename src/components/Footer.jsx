@@ -86,7 +86,8 @@ export default function Footer() {
             </div>
 
             <h3 className="font-semibold mb-2">Call us</h3>
-            <p className="text-gray-300 text-sm">+04 347 4240</p>
+            <p className="text-gray-300 text-sm">Sales: ﻿04 347 4240</p>
+            <p className="text-gray-300 text-sm">Service: 04 323 1625</p>
           </div>
 
           {/* COLUMN 3 – Quick Links */}
@@ -134,7 +135,7 @@ export default function Footer() {
 
           {/* COLUMN 4 – Showroom */}
           <div>
-            <h3 className="font-semibold mb-4">SHOWROOM:</h3>
+            <h3 className="font-semibold mb-4">Showroom</h3>
             <ul className="space-y-2 text-gray-400 text-sm">
               <li>ET JAR - J1 Complex</li>
               <li>Block A, Warehouse 11-12</li>
@@ -144,7 +145,7 @@ export default function Footer() {
 
           {/* COLUMN 5 – Factory */}
           <div>
-            <h3 className="font-semibold mb-4">FACTORY:</h3>
+            <h3 className="font-semibold mb-4">Factory</h3>
             <ul className="space-y-2 text-gray-400 text-sm">
               <li>Dubai Real Estate Centre Ind Park</li>
               <li>Unit 1-B, Jebel Ali, Ind Area 1</li>

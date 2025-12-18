@@ -11,8 +11,6 @@ export default function ContactSection() {
     location: "",
     products: "",
     projectType: "",
-    visitDate: "",
-    visitTime: "",
     role: "",
     message: "",
   });
@@ -37,8 +35,6 @@ export default function ContactSection() {
           location: formData.location,
           products: formData.products,
           projectType: formData.projectType,
-          visitDate: formData.visitDate,
-          visitTime: formData.visitTime,
           role: formData.role,
           message: formData.message,
           reply_to: formData.email,
@@ -54,8 +50,6 @@ export default function ContactSection() {
           location: "",
           products: "",
           projectType: "",
-          visitDate: "",
-          visitTime: "",
           role: "",
           message: "",
         });
@@ -73,7 +67,7 @@ export default function ContactSection() {
             Let’s Build Something <br /> Exceptional Together
           </h2>
 
-          <p className="mb-6">Have a project in mind?</p>
+          <p className="mb-6">Leave your contact details and tell us about your enquiry, and we’ll get back in touch with you as soon as possible.</p>
 
           <div className="flex items-center gap-3 mb-4">
             <FaEnvelope className="text-[#006F5F]" />
@@ -97,10 +91,23 @@ export default function ContactSection() {
               <input name="location" placeholder="Location*" required value={formData.location} onChange={handleChange} className="input" />
             </div>
 
-            <input name="products" placeholder="Products of Interest*" required value={formData.products} onChange={handleChange} className="input" />
+            <input
+              name="products"
+              placeholder="Products of Interest*"
+              required
+              value={formData.products}
+              onChange={handleChange}
+              className="input"
+            />
 
-            {/* Project Type Dropdown */}
-            <select name="projectType" required value={formData.projectType} onChange={handleChange} className="input text-gray-500">
+            {/* Project Type */}
+            <select
+              name="projectType"
+              required
+              value={formData.projectType}
+              onChange={handleChange}
+              className="input text-gray-500"
+            >
               <option value="">Project Type*</option>
               <option value="New Villa Build">New Villa Build</option>
               <option value="Renovation">Renovation</option>
@@ -108,40 +115,23 @@ export default function ContactSection() {
               <option value="Other">Other</option>
             </select>
 
-            {/* Date & Time */}
-            <div className="grid md:grid-cols-2 gap-4">
-              <input
-                type="date"
-                name="visitDate"
-                required
-                min={new Date().toISOString().split("T")[0]}
-                value={formData.visitDate}
-                onChange={handleChange}
-                className="input"
-              />
+            <input
+              name="role"
+              placeholder="Your Role*"
+              required
+              value={formData.role}
+              onChange={handleChange}
+              className="input"
+            />
 
-             <div>
-  <label className="block text-sm text-gray-600 mb-1">
-    Preferred Visit Time*
-  </label>
-
-  <input
-    type="time"
-    name="visitTime"
-    required
-    step="900"          // 👈 15-minute intervals
-    value={formData.visitTime}
-    onChange={handleChange}
-    className="w-full border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-600"
-  />
-</div>
-
-
-            </div>
-
-            <input name="role" placeholder="Your Role*" required value={formData.role} onChange={handleChange} className="input" />
-
-            <textarea name="message" rows="4" placeholder="Message" value={formData.message} onChange={handleChange} className="input" />
+            <textarea
+              name="message"
+              rows="4"
+              placeholder="Message"
+              value={formData.message}
+              onChange={handleChange}
+              className="input"
+            />
 
             <div className="flex items-start gap-3 text-sm">
               <input type="checkbox" required />
