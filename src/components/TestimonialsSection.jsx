@@ -1,5 +1,5 @@
 import testimg from "../assets/user.jpg";
-import bgImg from "../assets/testimonial-bg.jpg";
+import bgImg from "../assets/Testimonial-bg.jpg";
 
 // Swiper imports
 import { Swiper, SwiperSlide } from "swiper/react";
