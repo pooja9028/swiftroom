@@ -1,4 +1,8 @@
-import productImg from "../assets/Img-product.png";
+import productPVCu from "../assets/PVCu.webp";
+import productAluminum from "../assets/Aluminum-Sliding.jpg";
+import productBi from "../assets/Bi-folding.webp";
+import productWindow from "../assets/Aluminium-Windows.webp";
+
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import emailjs from "@emailjs/browser";
@@ -6,10 +10,10 @@ import { useNavigate } from "react-router-dom";
 
 
 const installs = [
-  { title: "Aluminum Sliding Door", image: productImg },
-  { title: "Aluminium Bi-Folding Doors", image: productImg },
-  { title: "Aluminium Windows", image: productImg },
-  { title: "PVCu Windows & Door", image: productImg },
+  { title: "Aluminum Sliding Door", image: productAluminum },
+  { title: "Aluminium Bi-Folding Doors", image: productBi },
+  { title: "Aluminium Windows", image: productWindow },
+  { title: "PVCu Windows & Door", image: productPVCu },
 ];
 
 export default function InstallSection() {

@@ -1,6 +1,7 @@
 import heroImage from "../assets/hero-img.jpg";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
   const [formData, setFormData] = useState({
@@ -14,6 +15,8 @@ export default function Hero() {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -34,6 +37,7 @@ export default function Hero() {
           industry: "",
           message: "",
         });
+        navigate("/thank-you"); //
       })
       .catch(() => alert("Something went wrong. Please try again."));
   };
