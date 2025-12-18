@@ -35,7 +35,7 @@ export default function Header() {
     rel="noopener noreferrer"
     className="flex items-center gap-2 hover:text-emerald-300 transition"
   >
-    📍 Jebel Ali, Ind Area 1
+    📍 J One Complex Etjar Complex Warehouse 11 - 12 Jebel Ali Industrial Area 1 - Dubai - United Arab Emirates
   </a>
 </div>
 
