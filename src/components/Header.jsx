@@ -18,10 +18,27 @@ export default function Header() {
         <div className="max-w-[1300px] mx-auto flex items-center justify-between py-2 px-4">
           {/* Left Side */}
           <div className="hidden md:flex items-center gap-6">
-            <span className="flex items-center gap-2">📧 Hello@swiftrooms.ae</span>
-            <span className="border-l h-4"></span>
-            <span className="flex items-center gap-2">📍 Jebel Ali, Ind Area 1</span>
-          </div>
+  {/* Email */}
+  <a
+    href="mailto:hello@swiftrooms.ae"
+    className="flex items-center gap-2 hover:text-emerald-300 transition"
+  >
+    📧 hello@swiftrooms.ae
+  </a>
+
+  <span className="border-l h-4"></span>
+
+  {/* Address (Google Maps) */}
+  <a
+    href="https://www.google.com/maps/search/?api=1&query=Jebel+Ali+Industrial+Area+1+Dubai"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 hover:text-emerald-300 transition"
+  >
+    📍 Jebel Ali, Ind Area 1
+  </a>
+</div>
+
 
           {/* Mobile Top Info */}
           <div className="md:hidden text-xs">📧 Hello@swiftrooms.ae</div>

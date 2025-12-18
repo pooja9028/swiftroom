@@ -167,12 +167,6 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-400 text-sm">
               <li>Dubai Real Estate Centre Ind Park</li>
               <li>Unit 1-B, Jebel Ali, Ind Area 1</li>
-              <li><a
-    href="tel:+97143231625"
-    className="hover:text-white transition"
-  >
-    04 323 1625
-  </a></li>
             </ul>
           </div>
 
