@@ -25,7 +25,7 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section id="why-choose-us" className="w-full py-20 bg-white">
+    <section id="why-choose-us" className="w-full py-10 bg-white">
       <div className="max-w-7xl mx-auto text-center px-6">
 
         {/* Heading */}

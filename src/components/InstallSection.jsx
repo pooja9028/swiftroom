@@ -76,7 +76,7 @@ export default function InstallSection() {
   };
 
   return (
-    <section className="w-full py-20 bg-white">
+    <section id="services" className="w-full py-10 bg-white">
       <div className="max-w-7xl mx-auto px-6 text-center">
 
         {/* Heading */}

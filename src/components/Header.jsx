@@ -51,7 +51,7 @@ export default function Header() {
           <nav className="hidden md:flex gap-8 text-[16px] font-medium text-gray-800">
             <a onClick={() => scrollToSection("home")} className="cursor-pointer hover:text-emerald-700">Home</a>
             <a onClick={() => scrollToSection("about")} className="cursor-pointer hover:text-emerald-700">About us</a>
-            <a onClick={() => scrollToSection("products")} className="cursor-pointer hover:text-emerald-700">Products</a>
+            <a onClick={() => scrollToSection("why-choose-us")} className="cursor-pointer hover:text-emerald-700">Why Choose Us</a>
             <a onClick={() => scrollToSection("services")} className="cursor-pointer hover:text-emerald-700">Services</a>
             <a onClick={() => scrollToSection("testimonials")} className="cursor-pointer hover:text-emerald-700">Testimonials</a>
           </nav>
@@ -92,7 +92,7 @@ export default function Header() {
         <nav className="flex flex-col gap-6 text-lg px-6 font-medium text-gray-900 mt-4">
           <a onClick={() => scrollToSection("home")} className="cursor-pointer">Home</a>
           <a onClick={() => scrollToSection("about")} className="cursor-pointer">About us</a>
-          <a onClick={() => scrollToSection("products")} className="cursor-pointer">Products</a>
+          <a onClick={() => scrollToSection("why-choose-us")} className="cursor-pointer">Why Choose Us</a>
           <a onClick={() => scrollToSection("services")} className="cursor-pointer">Services</a>
           <a onClick={() => scrollToSection("testimonials")} className="cursor-pointer">Testimonials</a>
 

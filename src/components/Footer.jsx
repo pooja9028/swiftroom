@@ -1,4 +1,10 @@
-import { FaFacebookF, FaTelegramPlane, FaInstagram } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaPinterestP,
+  FaWhatsapp,
+} from "react-icons/fa";
 import FooterImage from "../assets/Swiftrooms-footer.png";
 
 export default function Footer() {
@@ -26,55 +32,127 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Follow us</h3>
 
-            <div className="flex items-center gap-5 text-xl mb-6">
-              <FaFacebookF className="cursor-pointer hover:text-emerald-400" />
-              <FaTelegramPlane className="cursor-pointer hover:text-emerald-400" />
-              <FaInstagram className="cursor-pointer hover:text-emerald-400" />
+            {/* SOCIAL ICONS */}
+            <div className="flex items-center gap-6 text-xl mb-6 text-white">
+              <a
+                href="https://www.facebook.com/swiftroomsUAE"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-emerald-400 transition"
+                aria-label="Facebook"
+              >
+                <FaFacebookF />
+              </a>
+
+              <a
+                href="https://www.instagram.com/swiftrooms.ae/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-emerald-400 transition"
+                aria-label="Instagram"
+              >
+                <FaInstagram />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/uas/login-submit"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-emerald-400 transition"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedinIn />
+              </a>
+
+              <a
+                href="https://api.whatsapp.com/send/?phone=%2B971505269149&text&type=phone_number&app_absent=0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-emerald-400 transition"
+                aria-label="WhatsApp"
+              >
+                <FaWhatsapp />
+              </a>
+
+              <a
+                href="https://www.pinterest.com/swiftroomsuae/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-emerald-400 transition"
+                aria-label="Pinterest"
+              >
+                <FaPinterestP />
+              </a>
             </div>
 
             <h3 className="font-semibold mb-2">Call us</h3>
-            <p className="text-gray-300 text-sm">+1 800 854-36-80</p>
+            <p className="text-gray-300 text-sm">+04 347 4240</p>
           </div>
 
           {/* COLUMN 3 – Quick Links */}
           <div>
             <h3 className="font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2 text-gray-400 text-sm">
-            
-              <li>About Us</li>
-              <li>Services</li>
-              <li>Why Choose Us</li>
-              <li>Testimonials</li>
-            </ul>
+           <ul className="space-y-2 text-gray-400 text-sm">
+  <li>
+    <a
+      href="#about"
+      className="hover:text-white cursor-pointer transition"
+    >
+      About Us
+    </a>
+  </li>
+
+  <li>
+    <a
+      href="#services"
+      className="hover:text-white cursor-pointer transition"
+    >
+      Services
+    </a>
+  </li>
+
+  <li>
+    <a
+      href="#why-choose-us"
+      className="hover:text-white cursor-pointer transition"
+    >
+      Why Choose Us
+    </a>
+  </li>
+
+  <li>
+    <a
+      href="#testimonials"
+      className="hover:text-white cursor-pointer transition"
+    >
+      Testimonials
+    </a>
+  </li>
+</ul>
+
           </div>
 
-          {/* COLUMN 4 – Support */}
+          {/* COLUMN 4 – Showroom */}
           <div>
-            <h3 className="font-semibold mb-4">Showroom:</h3>
+            <h3 className="font-semibold mb-4">SHOWROOM:</h3>
             <ul className="space-y-2 text-gray-400 text-sm">
               <li>ET JAR - J1 Complex</li>
               <li>Block A, Warehouse 11-12</li>
-              <li>Contact lorem</li>
               <li>Jebel Ali, Ind Area 1</li>
             </ul>
           </div>
 
-          {/* COLUMN 5 – Company */}
+          {/* COLUMN 5 – Factory */}
           <div>
             <h3 className="font-semibold mb-4">FACTORY:</h3>
             <ul className="space-y-2 text-gray-400 text-sm">
               <li>Dubai Real Estate Centre Ind Park</li>
               <li>Unit 1-B, Jebel Ali, Ind Area 1</li>
               <li>Factory: 04 323 1625</li>
-              
             </ul>
           </div>
 
         </div>
-
-        {/* BOTTOM LINKS */}
-       
-
       </div>
     </footer>
   );

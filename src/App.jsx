@@ -10,10 +10,12 @@ import TestimonialsSection from "./components/TestimonialsSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import ThankYou from "./pages/ThankYou";
+import StickyWhatsApp from "./components/StickyWhatsApp";
 
 function HomePage() {
   return (
     <>
+      <StickyWhatsApp />    
       <Header />
       <Hero />
       <StatsSection />
@@ -22,6 +24,7 @@ function HomePage() {
       <AboutSection />
       <TestimonialsSection />
       <ContactSection />
+     
       <Footer />
     </>
   );

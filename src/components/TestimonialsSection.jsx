@@ -10,8 +10,8 @@ import "swiper/css/pagination";
 export default function TestimonialsSection() {
   const testimonials = [
     {
-      name: "Prashant Karuthasen",
-      text: "Absolutely great service! The team were very responsive and Jibran was an excellent project manager. Would highly recommend them.",
+      name: "zohair dashtin",
+      text: "As always the best of service, big thank you to Imran and his team for their tidy workmanship 👍",
       img: testimg,
     },
     {
