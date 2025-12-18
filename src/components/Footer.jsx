@@ -86,8 +86,26 @@ export default function Footer() {
             </div>
 
             <h3 className="font-semibold mb-2">Call us</h3>
-            <p className="text-gray-300 text-sm">Sales: ﻿04 347 4240</p>
-            <p className="text-gray-300 text-sm">Service: 04 323 1625</p>
+            <p className="text-gray-300 text-sm">
+  Sales:{" "}
+  <a
+    href="tel:+97143474240"
+    className="hover:text-white transition"
+  >
+    04 347 4240
+  </a>
+</p>
+
+<p className="text-gray-300 text-sm">
+  Service:{" "}
+  <a
+    href="tel:+97143231625"
+    className="hover:text-white transition"
+  >
+    04 323 1625
+  </a>
+</p>
+
           </div>
 
           {/* COLUMN 3 – Quick Links */}

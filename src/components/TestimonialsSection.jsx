@@ -42,9 +42,9 @@ export default function TestimonialsSection() {
         <h2 className="text-3xl md:text-4xl font-bold text-black">
           Testimonials & Reviews
         </h2>
-        <p className="text-gray-700 mt-2">
-          What our customers say about working with Swift Rooms.
-        </p>
+       <p className="text-white mt-2 drop-shadow-lg">
+  What our customers say about working with Swift Rooms.
+</p>
       </div>
 
       {/* Carousel */}
