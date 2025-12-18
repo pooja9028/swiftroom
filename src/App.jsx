@@ -22,7 +22,6 @@ function HomePage() {
       <InstallSection />
       <AboutSection />
       <WhyChooseUs />
-      <AboutSection />
       <TestimonialsSection />
       <ContactSection />
      
