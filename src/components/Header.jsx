@@ -30,7 +30,7 @@ export default function Header() {
 
   {/* Address (Google Maps) */}
   <a
-    href="https://maps.app.goo.gl/8aemTf5CET1puKEY8"
+    href="https://maps.app.goo.gl/unkAy9YnvtgkQN1g8"
     target="_blank"
     rel="noopener noreferrer"
     className="flex items-center gap-2 hover:text-emerald-300 transition"
