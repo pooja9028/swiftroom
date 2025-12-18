@@ -38,8 +38,9 @@ export default function TestimonialsSection() {
       style={{ backgroundImage: `url(${bgImg})` }}
     >
       {/* Heading */}
-      <div className="text-center mb-12 px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-black">
+      <div className="text-center mb-10 -mt-6">
+        <h2 className="text-4xl font-bold text-black">
+
           Testimonials & Reviews
         </h2>
        
