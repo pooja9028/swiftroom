@@ -1,4 +1,4 @@
-import aboutImage from "../assets/about-1.png";
+import aboutImage from "../assets/about1.11.png";
 
 export default function AboutSection() {
   return (
