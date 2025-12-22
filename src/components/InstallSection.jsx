@@ -1,7 +1,7 @@
-import productPVCu from "../assets/PVCu.webp";
-import productAluminum from "../assets/Aluminum-Sliding.jpg";
-import productBi from "../assets/Bi-folding.webp";
-import productWindow from "../assets/Aluminium-Windows.webp";
+import productPVCu from "../assets/pvc-sercice.jpeg";
+import productAluminum from "../assets/sliding-door-01.jpeg";
+import productBi from "../assets/BI-FoldingDoors.jpeg";
+import productWindow from "../assets/windows.jpeg";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
